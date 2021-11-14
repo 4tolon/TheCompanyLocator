@@ -1,2 +1,5 @@
-
+.env
 .idea/
+notebooks/.ipynb_checkpoints/Lugares-checkpoint.ipynb
+notebooks/.ipynb_checkpoints/OfiMongo-checkpoint.ipynb
+src/__pycache__/func.cpython-39.pyc

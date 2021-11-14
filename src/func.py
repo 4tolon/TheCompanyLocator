@@ -6,7 +6,8 @@ import requests
 import json
 import pandas as pd
 import time
-
+import os
+load_dotenv()
 
 # Funciones
 
@@ -19,6 +20,29 @@ def geocode(adress):
     data = requests.get(f"https://geocode.xyz/{adress}?json=1").json()
     time.sleep(2)
     return data
+
+def foursquare(busqueda, lat, lon):
+    '''
+    Funcion para llamar a la api de four square mediante un string de busqueda y una parejade corrdonadas
+    '''
+    tok_id = os.getenv('fs_cli')
+    tok_se = os.getenv('fs_sec')
+    url = 'https://api.foursquare.com/v2/venues/explore'
+
+    params = dict(
+        client_id=tok_id,
+        client_secret=tok_se,
+        v='20180323',
+        ll=f'{lat},{lon}',
+        query=f'{busqueda}',
+        limit=10,
+        radius=500
+    )
+    resp = requests.get(url=url, params=params)
+    data = json.loads(resp.text)
+    return data
+
+
 
 
 
