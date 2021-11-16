@@ -1,5 +1,7 @@
 # TheCompanyLocator
 
+## Solo esta visible el jupyter de visualizaciones
+
 ![portada](https://2.bp.blogspot.com/-qdX_L2QTgNk/WtZcIjf6tyI/AAAAAAAAAIk/-nzhSmr9Jbc4SEdjbPc6rnXf9ixwg5DOwCLcBGAs/s1600/homepage-hero-team_grande.gif)
 # Objetive
 The objective of this project is to determine the perfect location for a new company in the gaming industry. 
